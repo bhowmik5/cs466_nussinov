@@ -12,7 +12,6 @@ folder_path = Path("/Users/anuprovabhowmik/Downloads/cs466_nussinov-main/test")
 with open('tests.json', 'r') as f:
     data = json.load(f)
 num_rows = len(data)
-print(num_rows)
 
 #Initialize Dataframe
 df = pd.DataFrame(index=range(num_rows), columns=["Name", "Sequence", "Recall", "Precision", "F1"])
@@ -42,7 +41,7 @@ for thing in data:
         tp, fp, fn = 0,0,0
         stack = []
         pairs = []
-            
+                
         #Make list of pairs for possible solution
         for i, char in enumerate(item):
             if char == '(':
@@ -58,7 +57,7 @@ for thing in data:
             if thing in pairs:
                 tp += 1
                 pairs.remove(thing)
-            if thing not in pairs:
+            else:
                 fn += 1
         for thing in pairs:
             if thing not in actualPairs:
@@ -71,12 +70,12 @@ for thing in data:
             precision = tp/(tp+fp)
 
         if (precision + recall != 0):
-          f1 = 2*(precision * recall)/(precision + recall)
+            f1 = 2*(precision * recall)/(precision + recall)
 
-        if f1 > maxf1:
+        if f1 >= maxf1:
             df.loc[row] = [name, item, recall, precision, f1]
             maxf1 = f1
-    print(name, row)     
+    print(name, row)
     row += 1
 
 #Export data as spreadsheet
