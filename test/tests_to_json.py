@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 import json
 
-folder_path = Path("/media/ddas11/dd01/Anuprova/test_data/test_data")
+folder_path = Path("/Users/anuprovabhowmik/Downloads/cs466_nussinov-main/test")
 test_data = []
 for item in folder_path.iterdir():
     if item.is_file() and item.suffix == '.dbn':  
@@ -16,5 +16,3 @@ for item in folder_path.iterdir():
 
 with open('tests.json', 'w') as json_file:
     json.dump(test_data, json_file, indent=4)
-
-print("DONE")
