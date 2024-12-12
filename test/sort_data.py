@@ -1,7 +1,7 @@
 from pathlib import Path
 import os
 
-folder_path = Path("/Users/anuprovabhowmik/Downloads/test_data")
+folder_path = Path("/Users/anuprovabhowmik/Downloads/cs466_nussinov-main/test")
 
 
 for item in folder_path.iterdir():
@@ -10,19 +10,17 @@ for item in folder_path.iterdir():
             content = file.readlines()
 
             #Removes files with bp length over 50
+            length = 0
             for thing in content:
                 if thing.strip().split(": ")[0] == "#Length":
                     length = int(thing.strip().split(": ")[1].strip(','))
-                    print("TOO BIG", item.name)
                     break
-            if length > 50:
-                os.remove(item.name)
+            if length > 40:
+                os.remove(item.name)            
             else:
                 #Removes files without base pairs
-                if '(' not in content[3]:
+                if '(' not in content[4]:
                     os.remove(item.name)
-                    print("no pairs", item.name)
                 #Removes files with pseudoknots
-                if '[' in content[3]:
+                if '[' in content[4]:
                     os.remove(item.name)
-                    print("pseudoknot", item.name)
