@@ -8,7 +8,6 @@ This project implements a solution for RNA secondary structure prediction using 
   1. [Installation](#install)
      * [Using pip](#compilation)
           * [Dependencies](#pre-requisites)
-          * [install using pip](#install)
   2. [Usage instructions](#usage)
 
 <a name="install"></a>
