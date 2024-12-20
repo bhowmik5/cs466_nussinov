@@ -92,3 +92,6 @@ def nussinov(sequence):
         if secondary_structure not in outputList:
             outputList.append(secondary_structure)
     return outputList
+
+sequence = input("Enter your RNA sequence: ")
+print(nussinov(sequence))
