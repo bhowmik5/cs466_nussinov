@@ -36,6 +36,6 @@ This project implements a solution for RNA secondary structure prediction using 
 When executing nussinov.py, you will be prompted to enter a RNA sequence. Upon entering the RNA sequence, the program will output a list of possible structures for that given sequence.
 
 ## Authors
-Anuprova Bhowmik
-Diptatanu Das
-Zheng Wei
+Anuprova Bhowmik <br />
+Diptatanu Das <br />
+Zheng Wei <br />
