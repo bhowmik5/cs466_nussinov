@@ -1,7 +1,7 @@
 # CS 466 Nussinov's Project
 
 ## Nussinov RNA Folding Project
-This project implements a solution for RNA secondary structure prediction using the Nussinov algorithm. The core script, nussinovs_code.py performs RNA structure folding and outputs the predicted structure in dot-bracket notation, while the other scripts facilitate testing and managing input/output.
+This project implements a solution for RNA secondary structure prediction using the Nussinov algorithm. The core script, nussinovs_code.py, performs RNA structure folding and outputs the predicted structure in dot-bracket notation, while the other scripts facilitate testing and managing input/output.
 
 ## Contents
 
