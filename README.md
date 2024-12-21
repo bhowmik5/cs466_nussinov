@@ -30,7 +30,12 @@ This project implements a solution for RNA secondary structure prediction using 
   2. Navigate to the project directory in your terminal.
   3. Run the program with
       ```bash
-            python3 nussinovs_code.py
+            python3 nussinov.py
         ```
 ## Usage instructions
-When running the code, you will be prompted to enter a RNA sequence. Upon entering the RNA sequence, the program will output a list of possible structures for that given sequence. 
+When executing nussinov.py, you will be prompted to enter a RNA sequence. Upon entering the RNA sequence, the program will output a list of possible structures for that given sequence.
+
+## Authors
+Anuprova Bhowmik
+Diptatanu Das
+Zheng Wei
